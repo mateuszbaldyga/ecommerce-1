@@ -1,6 +1,5 @@
 import { UiButton } from '@repo/ui/UiButton'
 import { UiFormTextInput } from '@repo/ui/UiFormTextInput'
-import { UiIcon } from '@repo/ui/UiIcon'
 import type { Metadata } from 'next'
 import React from 'react'
 import SvgIcon from 'assets/svg/icon-info.svg'
@@ -19,10 +18,10 @@ export function ArHomePage({ children }: Props) {
   console.log('ArHomePage props:', { children })
 
   return (
-    <div className="container flex flex-col items-start gap-6 bg-ar-primary p-10">
+    <div className="bg-ar-primary container flex flex-col items-start gap-6 p-10">
       <div>
         <h3 className="font-bold">UiIcon</h3>
-        <UiIcon theme="primary" icon={SvgIcon} size={20} />
+        <SvgIcon />
       </div>
       <div>
         <h3 className="font-bold">UiButton</h3>
