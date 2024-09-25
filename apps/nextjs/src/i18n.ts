@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import { getRequestConfig } from 'next-intl/server'
 import type { RecursiveKeyOf } from 'types'
-import type translation from '../messages/en.json'
+import type translation from '../dictionaries/en.json'
 
 // Can be imported from a shared config
 const locales = ['en']
@@ -15,6 +15,6 @@ export default getRequestConfig(async ({ locale }) => {
     notFound()
 
   return {
-    messages: (await import(`../messages/${locale}.json`)).default,
+    messages: (await import(`../dictionaries/${locale}.json`)).default,
   }
 }) as any
