@@ -1,0 +1,44 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "build": {
+      "dependsOn": ["nextjs#sitemap"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "nextjs#dev": {
+      "dependsOn": ["nextjs#generate-env-types"]
+    },
+    "nextjs#sitemap": {
+      "dependsOn": ["nextjs#build"]
+    },
+    "nextjs#build": {
+      "dependsOn": ["nextjs#lint"]
+    },
+    "nextjs#lint": {
+      "dependsOn": ["nextjs#lint:eslint", "nextjs#lint:typescript"]
+    },
+    "nextjs#lint:eslint": {
+      "dependsOn": ["nextjs#generate-env-types"]
+    },
+    "nextjs#lint:typescript": {
+      "dependsOn": ["nextjs#generate-env-types"]
+    },
+    "nextjs#preview": {
+      "dependsOn": ["nextjs#start"]
+    },
+    "nextjs#start": {
+      "dependsOn": ["nextjs#build"]
+    },
+    "nextjs#analyze": {
+      "dependsOn": ["nextjs#build"]
+    },
+    "nextjs#generate-env-types": {}
+  }
+}
