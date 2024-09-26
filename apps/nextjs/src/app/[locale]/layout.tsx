@@ -6,7 +6,7 @@ import { getMessages } from 'next-intl/server'
 import React from 'react'
 import { ArGlobalStoreProvider } from 'store/ArGlobalStore'
 import { ArHeader } from 'components/ArHeader'
-import { Assistant } from 'next/font/google'
+import { Assistant, Cormorant } from 'next/font/google'
 
 type Props = {
   readonly children: React.ReactNode
@@ -19,6 +19,8 @@ export const metadata: Metadata = {
 }
 
 const assistant = Assistant({ subsets: ['latin'], variable: '--font-sans' })
+
+const playfairDisplay = Cormorant({ subsets: ['latin'], variable: '--font-serif' })
 
 async function Providers({ children }: { readonly children: React.ReactNode }) {
   const messages = await getMessages()
@@ -33,7 +35,7 @@ async function Providers({ children }: { readonly children: React.ReactNode }) {
 export default async function ArRootLayout({ children, params }: Props) {
   return (
     <html lang={params.locale}>
-      <body className={`${assistant.variable} font-sans font-light`}>
+      <body className={`${assistant.variable} ${playfairDisplay.variable} font-sans font-light`}>
         <ArHeader />
         <Providers>{children}</Providers>
       </body>

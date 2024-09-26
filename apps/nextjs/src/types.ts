@@ -37,3 +37,18 @@ export type ArContextActionWithPayload<T, P> = {
   payload: P
   type: T
 }
+
+export type LinkType = {
+  href: string
+  label: string
+}
+
+export type ImageType = { src: string, alt: string, width: number, height: number }
+
+export type MegaMenu = {
+  image: ImageType
+  heading?: string
+  footer: LinkType
+  links: LinkType[]
+  layout: 'columns' | 'list'
+}

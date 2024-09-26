@@ -2,11 +2,7 @@ import Link from 'next/link'
 import SvgLogo from 'svg/logo.svg'
 import { UiFormTextInput } from '@repo/ui/UiFormTextInput'
 import SvgArrow from 'svg/arrow.svg'
-
-type LinkType = {
-  href: string
-  label: string
-}
+import type { LinkType } from 'types'
 
 const links1: LinkType[] = [
   { href: '#', label: 'About' },

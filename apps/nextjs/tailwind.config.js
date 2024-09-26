@@ -24,6 +24,9 @@ module.exports = {
           letterSpacing: '0.04em',
         },
       ],
+      riga2: [
+        '1.125rem',
+      ],
     },
     zIndex: {
       1: 1,

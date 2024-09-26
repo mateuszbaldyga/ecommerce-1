@@ -2,8 +2,7 @@ import Link from 'next/link'
 import { ROUTES } from 'routes'
 import Image from 'next/image'
 import { cn } from 'utils/cn'
-
-type ImageType = { src: string, alt: string, width: number, height: number }
+import type { ImageType } from 'types'
 
 type Props = {
   image: ImageType
@@ -23,7 +22,7 @@ export function ArHero({ image, text }: Props) {
           className="h-full object-cover"
         />
 
-        <div className="text-riga absolute left-0 top-0 flex size-full items-center text-white">
+        <div className="absolute left-0 top-0 flex size-full items-center text-riga text-white">
           {text.map((item, index) => (
             <span
               key={index}
