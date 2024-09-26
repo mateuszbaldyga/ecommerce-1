@@ -13,12 +13,14 @@
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
+    "clsx": "catalog:",
     "framer-motion": "catalog:",
     "next": "catalog:",
     "next-intl": "catalog:",
     "next-sitemap": "catalog:",
     "react": "catalog:",
-    "react-dom": "catalog:"
+    "react-dom": "catalog:",
+    "tailwind-merge": "catalog:"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "catalog:",

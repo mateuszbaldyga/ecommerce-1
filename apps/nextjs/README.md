@@ -43,19 +43,15 @@ Contains all the common components that can be used across the app. For example 
 
 Contains all the utility components like auth gate, error boundary, etc.
 
-**lib**
-
-Contains all the utility functions, hooks, and helpers.
-
-**lib/hooks**
+**hooks**
 
 Contains all the custom hooks. Custom hooks are the hooks that are used across the app and are not related to any specific module.
 
-**lib/helpers**
+**helpers**
 
 Contains all the helper functions. Helper functions are the functions that are used across the app and are not related to any specific module.
 
-**lib/utils**
+**utils**
 
 Contains all the utility functions. Utility functions are the functions that are used across the app and are not related to any specific module.
 

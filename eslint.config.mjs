@@ -3,13 +3,14 @@ import antfu from '@antfu/eslint-config'
 
 const ERROR = 2
 const WARN = 1
+const OFF = 0
 
 export default antfu(
-/**
- *
- *  Base Config
- *
- */
+  /**
+   *
+   *  Base Config
+   *
+   */
   {
     react: true,
     typescript: true,
@@ -38,10 +39,7 @@ export default antfu(
       },
     },
     rules: {
-      'tailwindcss/no-custom-classname': [WARN, {
-        config: './config/tailwind-config/base.js',
-        whitelist: ['(.*)\\-ar\\-(.*)'],
-      }],
+      'tailwindcss/no-custom-classname': [OFF],
     },
   },
   /**
@@ -58,10 +56,7 @@ export default antfu(
       },
     },
     rules: {
-      'tailwindcss/no-custom-classname': [WARN, {
-        config: './apps/nextjs/tailwind.config.js',
-        whitelist: ['(.*)\\-ar\\-(.*)'],
-      }],
+      'tailwindcss/no-custom-classname': [OFF],
     },
   },
 )

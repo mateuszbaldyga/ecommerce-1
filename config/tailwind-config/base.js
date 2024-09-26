@@ -6,6 +6,7 @@ module.exports = withTV({
     extend: {
       colors: {
         'ar-primary': '#003844',
+        'ar-black': '#000',
       },
     },
   },
