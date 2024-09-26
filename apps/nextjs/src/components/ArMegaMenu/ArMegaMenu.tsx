@@ -20,25 +20,26 @@ export function ArMegaMenu({ image, heading, footer, links, layout }: Props) {
           case 'columns':
             return (
               <div className="relative">
-                <div className="mb-6 font-serif text-riga2 italic">
+                <div className="text-riga2 mb-6 font-serif italic">
                   {heading}
                 </div>
 
                 <ul className="grid grid-cols-[repeat(3,220px)] gap-y-2">
                   {links.map((link, index) => (
                     <li key={index}>
-                      <Link
-                        href={link.href}
-                        className="transition-opacity hover:opacity-50"
-                      >
+                      <Link href={link.href} className="group relative">
                         {link.label}
+                        <span className="left-100 absolute ml-2 font-serif italic opacity-0 transition-opacity group-hover:opacity-100">
+                          {' '}
+                          (View)
+                        </span>
                       </Link>
                     </li>
                   ))}
                 </ul>
 
                 <Link
-                  className="mt-6 block font-serif text-riga2 italic"
+                  className="text-riga2 relative mt-6 inline-block font-serif italic before:absolute before:-bottom-0 before:left-0 before:h-px before:w-full before:bg-white before:opacity-0 before:transition-opacity hover:before:opacity-100"
                   href={footer.href}
                 >
                   {footer.label}
@@ -48,21 +49,22 @@ export function ArMegaMenu({ image, heading, footer, links, layout }: Props) {
           case 'list':
             return (
               <div className="relative flex h-full flex-col items-center pb-16">
-                <ul className="flex flex-1 flex-col justify-center gap-y-4 text-center font-serif text-riga2 italic">
+                <ul className="text-riga2 flex flex-1 flex-col justify-center gap-y-4 text-center font-serif italic">
                   {links.map((link, index) => (
                     <li key={index}>
-                      <Link
-                        href={link.href}
-                        className="transition-opacity hover:opacity-50"
-                      >
+                      <Link href={link.href} className="group">
                         {link.label}
+                        <span className="left-100 absolute ml-2 font-serif italic opacity-0 transition-opacity group-hover:opacity-100">
+                          {' '}
+                          (View)
+                        </span>
                       </Link>
                     </li>
                   ))}
                 </ul>
 
                 <Link
-                  className="mt-6 block font-serif text-riga2 italic"
+                  className="text-riga2 relative mt-6 block font-serif italic before:absolute before:-bottom-0 before:left-0 before:h-px before:w-full before:bg-white before:opacity-0 before:transition-opacity hover:before:opacity-100"
                   href={footer.href}
                 >
                   {footer.label}

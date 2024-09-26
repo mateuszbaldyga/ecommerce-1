@@ -20,6 +20,7 @@ export function ArHero({ image, text }: Props) {
           height={image.height}
           sizes="100vw"
           className="h-full object-cover"
+          priority
         />
 
         <div className="absolute left-0 top-0 flex size-full items-center text-riga text-white">
