@@ -23,7 +23,9 @@ export default function ArHomePage() {
           text={['Urban Madonna', 'City Style Vision']}
         />
 
-        <SvgLogo className="absolute inset-x-16 bottom-16 text-white" />
+        <div className="container absolute bottom-16 left-0 text-white">
+          <SvgLogo />
+        </div>
       </div>
 
       <ArImageBlock

@@ -10,9 +10,9 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: '1.5rem',
+      padding: 'clamp(24px,6lvw,64px)',
       screens: {
-        sm: '1440px',
+        sm: 'none',
       },
     },
     fontSize: {
