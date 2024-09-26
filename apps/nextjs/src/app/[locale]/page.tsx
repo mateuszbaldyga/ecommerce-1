@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
-import React from 'react'
 import { ArImageBlock } from 'components/ArImageBlock'
+import { ArHero } from 'components/ArHero'
+import SvgLogo from 'svg/logo.svg'
+import { ArFooter } from 'components/ArFooter'
 
 export const metadata: Metadata = {
   title: 'Ar Home Page',
@@ -10,24 +12,68 @@ export const metadata: Metadata = {
 export default function ArHomePage() {
   return (
     <>
+      <div className="relative">
+        <ArHero
+          image={{
+            src: '/images/hero-1.webp',
+            alt: '',
+            width: 2560,
+            height: 1825,
+          }}
+          text={['Urban Madonna', 'City Style Vision']}
+        />
+
+        <SvgLogo className="absolute inset-x-16 bottom-16 text-white" />
+      </div>
+
       <ArImageBlock
         images={[
-          { src: '/images/section-4a.webp', alt: '', width: 1400, height: 2089 },
-          { src: '/images/section-4b.webp', alt: '', width: 1400, height: 2089 },
+          {
+            src: '/images/section-4a.webp',
+            alt: '',
+            width: 1400,
+            height: 2089,
+          },
+          {
+            src: '/images/section-4b.webp',
+            alt: '',
+            width: 1400,
+            height: 2089,
+          },
         ]}
         text={['Dresses', 'Soirée Of The Season']}
       />
       <ArImageBlock
         images={[
-          { src: '/images/section-1a.webp', alt: '', width: 1400, height: 2089 },
-          { src: '/images/section-1b.webp', alt: '', width: 1400, height: 2089 },
+          {
+            src: '/images/section-1a.webp',
+            alt: '',
+            width: 1400,
+            height: 2089,
+          },
+          {
+            src: '/images/section-1b.webp',
+            alt: '',
+            width: 1400,
+            height: 2089,
+          },
         ]}
         text={['Tops', 'Striking And Subtle']}
       />
       <ArImageBlock
         images={[
-          { src: '/images/section-2a.webp', alt: '', width: 1400, height: 2089 },
-          { src: '/images/section-2b.webp', alt: '', width: 1400, height: 2089 },
+          {
+            src: '/images/section-2a.webp',
+            alt: '',
+            width: 1400,
+            height: 2089,
+          },
+          {
+            src: '/images/section-2b.webp',
+            alt: '',
+            width: 1400,
+            height: 2089,
+          },
         ]}
         text={['Outerwear', 'Fall For Leather']}
       />
@@ -39,11 +85,23 @@ export default function ArHomePage() {
       />
       <ArImageBlock
         images={[
-          { src: '/images/section-5a.webp', alt: '', width: 1400, height: 2089 },
-          { src: '/images/section-5b.webp', alt: '', width: 1400, height: 2089 },
+          {
+            src: '/images/section-5a.webp',
+            alt: '',
+            width: 1400,
+            height: 2089,
+          },
+          {
+            src: '/images/section-5b.webp',
+            alt: '',
+            width: 1400,
+            height: 2089,
+          },
         ]}
         text={['Shoes', 'Roses Underfoot']}
       />
+
+      <ArFooter />
     </>
   )
 }

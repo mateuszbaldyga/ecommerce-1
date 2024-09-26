@@ -18,7 +18,12 @@ module.exports = {
     fontSize: {
       oslo: '0.8125rem',
       base: '1rem',
-      riga: '1.125rem',
+      riga: [
+        '1.125rem',
+        {
+          letterSpacing: '0.04em',
+        },
+      ],
     },
     zIndex: {
       1: 1,
