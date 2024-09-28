@@ -1,3 +1,4 @@
+import process from 'node:process'
 import { createClient } from 'next-sanity'
 
 export const client = createClient({
