@@ -1,0 +1,34 @@
+{
+  "name": "ecommerce-1-cms",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "keywords": [
+    "sanity"
+  ],
+  "main": "package.json",
+  "scripts": {
+    "dev": "sanity dev",
+    "start": "sanity start",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "deploy-graphql": "sanity graphql deploy"
+  },
+  "dependencies": {
+    "@sanity/icons": "catalog:",
+    "@sanity/ui": "catalog:",
+    "@sanity/vision": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "sanity": "catalog:",
+    "sanity-plugin-documents-pane": "^2.3.0",
+    "styled-components": "^6.1.8"
+  },
+  "devDependencies": {
+    "@sanity/eslint-config-studio": "catalog:",
+    "@types/react": "catalog:",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:"
+  }
+}

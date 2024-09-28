@@ -25,34 +25,12 @@ export default antfu(
    *
    */
   ...tailwind.configs['flat/recommended'],
-  /**
-   *
-   * UI Components
-   * packages/ui
-   *
-   */
+
   {
-    files: ['packages/ui/**/*.{js,ts,jsx,tsx}'],
+    files: ['packages/**/*.{js,ts,jsx,tsx}', 'apps/**/*.{js,ts,jsx,tsx}'],
     settings: {
       tailwindcss: {
         config: './config/tailwind-config/base.js',
-      },
-    },
-    rules: {
-      'tailwindcss/no-custom-classname': [OFF],
-    },
-  },
-  /**
-   *
-   * Next.js
-   * apps/nextjs
-   *
-   */
-  {
-    files: ['apps/nextjs/**/*.{js,ts,jsx,tsx}'],
-    settings: {
-      tailwindcss: {
-        config: './apps/nextjs/tailwind.config.js',
       },
     },
     rules: {

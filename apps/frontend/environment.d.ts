@@ -4,7 +4,6 @@
   
 declare namespace NodeJS { 
   export interface ProcessEnv {
-NEXT_PUBLIC_API_URL: string
-SUPER_PRIVATE_KEY_YOU_SHOULD_NOT_SHARE_TO_GIT: string 
+NEXT_PUBLIC_SANITY_PROJECT_ID: string 
   } 
 }

@@ -23,4 +23,7 @@ module.exports = compose(
   experimental: {
     typedRoutes: true,
   },
+  images: {
+    domains: ['cdn.sanity.io', 'via.placeholder.com'],
+  },
 })
